@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Prog.css">
+    <title>Even_Odd_Checker</title>
+  </head>
+  <body>
+    <div>
+      <h1>Even_Odd_Checker</h1>
+      <input type="text" id="user_input" placeholder="Enter a value" />
+      <button id="check">CHECK</button>
+      <p id="result"></p>
+    </div>
+  </body>
+  <script>
+    document.getElementById("check").addEventListener("click", function () {
+      number = document.getElementById("user_input").value;
+      result = document.getElementById("result");
+      if (isNaN(number) || number === "") {
+        result.textContent = "Invalid Value";
+      } else {
+        if (number % 2 == 0) {
+          result.textContent = `${number} is Even`;
+        } else {
+          result.textContent = `${number} is Odd`;
+        }
+      }
+    });
+  </script>
 </html>
