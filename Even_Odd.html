@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Prog.css">
+    <link rel="stylesheet" href="Prog.css" />
     <title>Even_Odd_Checker</title>
   </head>
   <body>
@@ -14,19 +14,5 @@
       <p id="result"></p>
     </div>
   </body>
-  <script>
-    document.getElementById("check").addEventListener("click", function () {
-      number = document.getElementById("user_input").value;
-      result = document.getElementById("result");
-      if (isNaN(number) || number === "") {
-        result.textContent = "Invalid Value";
-      } else {
-        if (number % 2 == 0) {
-          result.textContent = `${number} is Even`;
-        } else {
-          result.textContent = `${number} is Odd`;
-        }
-      }
-    });
-  </script>
+  <script src="Even_Odd.js"></script>
 </html>
